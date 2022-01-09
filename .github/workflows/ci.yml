@@ -49,6 +49,9 @@ jobs:
       - name: generate
         run: npm run generate
 
+      - name: Dist list output files
+        run: ls -la dist/
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
