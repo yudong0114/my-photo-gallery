@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>TOP</h1>
+    <h1>一覧</h1>
     <ul>
       <li v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/photo/${content.id}`">
@@ -14,7 +14,7 @@
 <script>
 import axios from 'axios';
 export default {
-  name: 'IndexPage',
+  name: 'PhotoIndexPage',
   async asyncData() {
     const { data } = await axios.get(
       `${process.env.MICROCMS_API_URL}`,

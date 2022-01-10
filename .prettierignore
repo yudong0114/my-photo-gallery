@@ -97,3 +97,6 @@ sw.*
 
 # README
 README.md
+
+# Github Actions
+ci.yml

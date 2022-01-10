@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -48,4 +50,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  generate: {
+    async routes() {
+      const pages = await axios
+        .get('https://yudongs-photo-gallery.microcms.io/api/v1/photo?limit=100', {
+          headers: { 'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}` }
+        })
+        .then((res) =>
+          res.data.contents.map((content) => ({
+            route: `/photo/${content.id}`,
+            payload: content
+          }))
+        )
+      return pages
+    }
+  },
 }

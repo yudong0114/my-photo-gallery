@@ -4,7 +4,10 @@
 ## 構成
 * nuxt.js(フロント)
 * microCMS(API)
+  * `MICROCMS_API_URL`：APIのURLはリポジトリのsecretに設定
+  * `MICROCMS_API_KEY`：APIキーはリポジトリのsecretに設定
 * Github Actions(CI/CD)
+  * `.git-ftp-include`：.gitignoreに含まれているがリリースする方法
 * ロリポップ(サーバー)
 
 ## ビルド
