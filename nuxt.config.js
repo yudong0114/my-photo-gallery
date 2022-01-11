@@ -54,7 +54,7 @@ export default {
   generate: {
     async routes() {
       const pages = await axios
-        .get('https://yudongs-photo-gallery.microcms.io/api/v1/photo?limit=100', {
+        .get(`${process.env.MICROCMS_API_URL}?limit=100`, {
           headers: { 'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}` }
         })
         .then((res) =>
