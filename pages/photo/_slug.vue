@@ -19,7 +19,10 @@ export default {
     const { data } = await axios.get(
       `${process.env.MICROCMS_API_URL}/${params.slug}`,
       {
-        headers: { 'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}` }
+        headers: {
+          'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}`,
+          'cache-control': 'no-cache'
+        }
       }
     )
     return data

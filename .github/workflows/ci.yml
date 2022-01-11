@@ -54,6 +54,7 @@ jobs:
           echo MICROCMS_API_URL=${{ secrets.MICROCMS_API_URL }} >> .env
           echo MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }} >> .env
           npm run generate
+          ls -la dist/photo/
 
       - name: Deploy via FTP⏫
         uses: SamKirkland/FTP-Deploy-Action@3.0.0

@@ -55,7 +55,10 @@ export default {
     async routes() {
       const pages = await axios
         .get(`${process.env.MICROCMS_API_URL}?limit=100`, {
-          headers: { 'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}` }
+          headers: {
+            'X-MICROCMS-API-KEY': `${process.env.MICROCMS_API_KEY}`,
+            'cache-control': 'no-cache'
+          }
         })
         .then((res) =>
           res.data.contents.map((content) => ({
