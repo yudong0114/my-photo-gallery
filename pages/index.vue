@@ -3,9 +3,7 @@
     <h1>TOP</h1>
     <ul>
       <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/photo/${content.id}`">
-          {{ content.title }}
-        </nuxt-link>
+        <PhotoCard :photo-url="content.photo.url" />
       </li>
     </ul>
   </main>
@@ -13,8 +11,13 @@
 
 <script>
 import axios from 'axios';
+import PhotoCard from '@/components/organisms/PhotoCard.vue';
+
 export default {
   name: 'IndexPage',
+  components: {
+    PhotoCard,
+  },
   async asyncData() {
     const { data } = await axios.get(
       `${process.env.MICROCMS_API_URL}`,
