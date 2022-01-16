@@ -1,8 +1,19 @@
-body {
-  max-width: 1000px;
-  margin: 0 auto;
+@import "variables.scss";
+html {
+  font-size: 10px;
 }
-
+body {
+  font-size: 1.4rem;
+  color: $text-color-black;
+}
+a {
+  color: $text-color-green;
+  text-decoration: none;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
 img {
   max-width: 100%;
   height: auto;

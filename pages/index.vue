@@ -1,22 +1,20 @@
 <template>
-  <main>
-    <h1>TOP</h1>
-    <ul>
-      <li v-for="content in contents" :key="content.id">
-        <PhotoCard :photo-url="content.photo.url" />
-      </li>
-    </ul>
+  <main class="top">
+    <PhotoList :photo-datas="contents" />
+    <Profile />
   </main>
 </template>
 
 <script>
 import axios from 'axios';
-import PhotoCard from '@/components/organisms/PhotoCard.vue';
+import PhotoList from '@/components/organisms/PhotoList.vue';
+import Profile from '@/components/organisms/Profile.vue';
 
 export default {
   name: 'IndexPage',
   components: {
-    PhotoCard,
+    PhotoList,
+    Profile,
   },
   async asyncData() {
     const { data } = await axios.get(
@@ -29,6 +27,11 @@ export default {
       }
     )
     return data
+  },
+  head() {
+    return {
+      title: 'Yudong’s Photo Gallery',
+    }
   }
 }
 </script>

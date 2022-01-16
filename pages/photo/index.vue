@@ -1,20 +1,21 @@
 <template>
-  <main>
-    <h1>一覧</h1>
-    <ul>
-      <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/photo/${content.id}`">
-          {{ content.title }}
-        </nuxt-link>
-      </li>
-    </ul>
-  </main>
+  <div class="photo">
+    <PageTitle page-title="Photo - List" />
+    <PhotoList :photo-datas="contents" />
+  </div>
 </template>
 
 <script>
 import axios from 'axios';
+import PageTitle from '@/components/atoms/PageTitle.vue';
+import PhotoList from '@/components/organisms/PhotoList.vue';
+
 export default {
   name: 'PhotoIndexPage',
+  components: {
+    PageTitle,
+    PhotoList,
+  },
   async asyncData() {
     const { data } = await axios.get(
       `${process.env.MICROCMS_API_URL}`,
@@ -26,6 +27,11 @@ export default {
       }
     )
     return data
+  },
+  head() {
+    return {
+      title: '一覧',
+    }
   }
 }
 </script>
