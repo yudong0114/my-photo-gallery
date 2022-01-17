@@ -1,5 +1,5 @@
 <template>
-  <section class="photolist">
+  <section class="photoList">
     <PhotoCard
       v-for="photoData in photoDatas"
       :key="photoData.id"
@@ -27,9 +27,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.photolist {
-  margin: 50px 0;
+.photoList {
+  margin: 50px 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &:after {
+    content:"";
+    display: block;
+    width: 30%;
+    height: 0;
+  }
 }
 </style>

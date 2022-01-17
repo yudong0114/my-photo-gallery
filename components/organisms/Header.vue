@@ -25,11 +25,17 @@ export default {
     justify-content: center;
     font-size: 2.0rem;
     font-weight: 700;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   &__list {
     display: flex;
     padding: 0;
     font-size: 2.0rem;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   &__item {
     margin: 0 10px;

@@ -16,8 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .photo {
-  width: 30vw;
-  height: 30vw;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   transition: 1s all;
   &:hover {

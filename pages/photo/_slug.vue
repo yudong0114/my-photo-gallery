@@ -41,12 +41,39 @@ export default {
         }
       }
     )
-    return data
+    return data;
   },
   head() {
     return {
       title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: `${this.description} | Yudong’s Photo Gallery` },
+      ]
     }
-  }
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+.photoDetail {
+  &__description {
+    padding: 10px 0;
+    text-align: center;
+  }
+  &__about {
+  }
+  &__group {
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  &__key {
+    width: 30%;
+    text-align: center;
+  }
+  &__val {
+    width: 70%;
+    text-align: center;
+  }
+}
+</style>

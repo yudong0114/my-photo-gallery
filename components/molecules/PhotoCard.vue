@@ -29,8 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 .photoCard {
-  width: 30vw;
-  height: 30vw;
+  width: 30%;
+  height: 30%;
+  margin-bottom: 20px;
   overflow: hidden;
 }
+
 </style>

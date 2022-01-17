@@ -31,6 +31,9 @@ export default {
   head() {
     return {
       title: '一覧',
+      meta: [
+        { hid: 'description', name: 'description', content: '写真一覧 | Yudong’s Photo Gallery' },
+      ]
     }
   }
 }

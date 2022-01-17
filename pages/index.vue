@@ -31,6 +31,9 @@ export default {
   head() {
     return {
       title: 'Yudong’s Photo Gallery',
+      meta: [
+        { hid: 'description', name: 'description', content: '北海道に住む私が、一眼レフ初心者として日頃の景色を撮っていく趣味のサイト「Yudong’s Photo Gallery」です。' },
+      ]
     }
   }
 }

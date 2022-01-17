@@ -1,0 +1,8 @@
+// $mb: モバイル
+$mb: 767px;
+// スマホ用のメディアクエリ
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}

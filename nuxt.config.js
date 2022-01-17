@@ -15,7 +15,6 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { hid: 'robots', name: 'robots', content: 'noindex' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -29,7 +28,8 @@ export default {
   // 共通variablesのスタイル
   styleResources: {
     scss: [
-      '~/static/scss/_variables.scss'
+      '~/static/scss/_variables.scss',
+      '~/static/scss/_mixins.scss',
     ]
   },
 
