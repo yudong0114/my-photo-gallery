@@ -36,9 +36,9 @@ export default {
     text-align: center;
   }
   &__photo {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
   }
   &__about {
     margin: 10px 0;
