@@ -45,7 +45,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/google-analytics',
+    '@nuxtjs/google-gtag',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -62,13 +62,8 @@ export default {
   },
 
   // GA
-  googleAnalytics: {
+  'google-gtag': {
     id: process.env.GOOGLE_ANALYTICS_ID,
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
