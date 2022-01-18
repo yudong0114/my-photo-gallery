@@ -53,6 +53,7 @@ jobs:
           touch .env
           echo MICROCMS_API_URL=${{ secrets.MICROCMS_API_URL }} >> .env
           echo MICROCMS_API_KEY=${{ secrets.MICROCMS_API_KEY }} >> .env
+          echo GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
           npm run generate
           ls -la dist/photo/
 
