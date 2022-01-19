@@ -28,8 +28,9 @@ export default {
 
 <style lang="scss" scoped>
 .photoList {
-  margin: 50px 10px;
+  margin: 50px 5%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   &:after {

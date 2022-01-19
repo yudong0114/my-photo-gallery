@@ -20,6 +20,7 @@ export default {
   object-fit: cover;
   transition: 1s all;
   &:hover {
+    opacity: 0.7;
     transform: scale(1.2, 1.2);
     transition: 1s all;
   }

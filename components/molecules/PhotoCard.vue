@@ -33,6 +33,7 @@ export default {
   height: 30%;
   margin-bottom: 20px;
   overflow: hidden;
+  border: 2px solid $text-color-black;
 }
 
 </style>

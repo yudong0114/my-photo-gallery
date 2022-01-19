@@ -8,7 +8,7 @@
     <dl class="photoDetail__about">
       <div class="photoDetail__group">
         <dt class="photoDetail__key">撮影日</dt>
-        <dd class="photoDetail__val">{{ date }}</dd>
+        <dd class="photoDetail__val">{{ new Date(date).toLocaleDateString() }}</dd>
       </div>
       <div class="photoDetail__group">
         <dt class="photoDetail__key">撮影地</dt>
@@ -59,21 +59,21 @@ export default {
   &__description {
     padding: 10px 0;
     text-align: center;
+    font-size: 2.0rem;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   &__about {
+    font-size: 2.0rem;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   &__group {
-    margin: 0 20px;
+    margin: 0 20%;
     display: flex;
-    justify-content: center;
-  }
-  &__key {
-    width: 30%;
-    text-align: center;
-  }
-  &__val {
-    width: 70%;
-    text-align: center;
+    justify-content: space-between;
   }
 }
 </style>

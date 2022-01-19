@@ -43,16 +43,14 @@ export default {
   &__about {
     margin: 10px 0;
     font-size: 2.0rem;
+    @include mobile {
+      font-size: 1.4rem;
+    }
   }
   &__group {
     display: flex;
-    justify-content: center;
-  }
-  &__key {
-    width: 100px;
-  }
-  &__val {
-    width: 200px;
+    justify-content: space-between;
+    margin: auto 20%;
   }
 }
 </style>
