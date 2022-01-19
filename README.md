@@ -32,3 +32,5 @@ $ npm run generate
 https://blog.microcms.io/microcms-nuxt-jamstack-blog/
 * microCMS+NuxtのJamstackブログをS3にデプロイしてみる  
 https://zenn.dev/ikeo/articles/8dfbfac7ad4cb5226b4d#microcms%E3%81%AE%E8%A8%AD%E5%AE%9A
+* Nuxt.jsでできたSPAにGoogle アナリティクス 4 プロパティ(GA4)を導入する方法
+https://zenn.dev/sueshin/articles/d67b40126ed12b
