@@ -5,6 +5,7 @@
       :key="photoData.id"
       :photo-id="photoData.id"
       :photo-url="photoData.photo.url"
+      :photo-title="photoData.title"
     />
   </section>
 </template>

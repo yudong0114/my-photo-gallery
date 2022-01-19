@@ -1,7 +1,7 @@
 <template>
   <div class="photoCard">
     <nuxt-link class="header__link" :to="`/photo/${photoId}`">
-      <Photo :photo-url="photoUrl" />
+      <Photo :photo-url="photoUrl" :photo-title="photoTitle" />
     </nuxt-link>
   </div>
 </template>
@@ -22,7 +22,11 @@ export default {
     photoUrl: {
       type: String,
       required: true
-    }
+    },
+    photoTitle: {
+      type: String,
+      required: true
+    },
   }
 }
 </script>
@@ -35,5 +39,4 @@ export default {
   overflow: hidden;
   border: 2px solid $text-color-black;
 }
-
 </style>

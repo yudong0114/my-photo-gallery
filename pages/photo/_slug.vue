@@ -2,7 +2,7 @@
   <div class="photoDetail">
     <PageTitle :page-title="title" />
     <figure class="photoDetail__photoArea">
-      <img :src="photo.url" :alt="photo.title" class="photoDetail__photoImg">
+      <img :src="photo.url" :alt="title" class="photoDetail__photoImg">
     </figure>
     <p class="photoDetail__description">{{ description }}</p>
     <dl class="photoDetail__about">
